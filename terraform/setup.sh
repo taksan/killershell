@@ -20,3 +20,5 @@ region = sa-east-1
 EOF
 
 echo done
+
+touch /tmp/setup-complete
