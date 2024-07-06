@@ -1,8 +1,14 @@
-apt install wget curl -y
+echo "Downloading terraform"
 
-wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-sudo apt update && sudo apt install -y terraform
+wget https://releases.hashicorp.com/terraform/1.9.1/terraform_1.9.1_linux_amd64.zip
+
+echo "unzipping"
+unzip terraform*zip
+
+echo "installing"
+mv terraform /usr/bin/
+
+echo "configuring aws credentials"
 
 mkdir -p .aws
 chmod 700 .aws
@@ -12,3 +18,5 @@ aws_access_key_id = test
 aws_secret_access_key = test
 region = sa-east-1
 EOF
+
+echo done
