@@ -5,6 +5,11 @@
     "intro": {
       "text": "intro.md"
     },
+    "assets": {
+        "host01": [
+            { "file": "instructions.txt", "target": "~/"}
+        ]
+    },
     "steps": [
       {
         "title": "Create a pod",
