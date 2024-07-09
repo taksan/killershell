@@ -11,26 +11,17 @@ unzip awscliv2.zip
 
 rm *zip LICENSE.txt
 
-
-echo "Configuring aws credentials"
-
 mkdir -p .aws
 chmod 700 .aws
-cat <<EOF > .aws/credentials
-[default]
-aws_access_key_id = test
-aws_secret_access_key = test
-EOF
-
-cat <<EOF > .aws/config
-[profile default]
-region=us-east-1
-output=json
-endpoint_url=http://localhost:4566
-EOF
-
-chmod -R 600 .aws
-
-echo done
 
 touch /tmp/setup-complete
+
+docker run \
+  --rm -d \
+  -p 127.0.0.1:4566:4566 \
+  -p 127.0.0.1:4510-4559:4510-4559 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  localstack/localstack
+
+
+touch /tmp/localstack-up

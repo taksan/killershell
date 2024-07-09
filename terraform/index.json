@@ -7,6 +7,12 @@
       "background": "setup.sh",
       "foreground": "wait.sh"
     },
+    "assets": {
+        "host01": [
+            { "file": "localstack_credentials", "target": "./aws/credentials"},
+            { "file": "localstack_config", "target": "./aws/config"}
+        ]
+    },    
     "steps": [
       {
         "title": "Usando terraform",

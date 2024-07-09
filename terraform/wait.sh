@@ -1,15 +1,11 @@
 set +x
 
-echo Aguardando a preparação do ambiente
+echo Instalando terraform e aws cli
 
 while [ ! -f /tmp/setup-complete ]; do sleep 1; done
 
 echo "Iniciando o localstack"
-docker run \
-  --rm -d \
-  -p 127.0.0.1:4566:4566 \
-  -p 127.0.0.1:4510-4559:4510-4559 \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  localstack/localstack
+
+while [ ! -f /tmp/localstack-up ]; do sleep 1; done
 
 echo Preparação concluída
