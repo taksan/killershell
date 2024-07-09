@@ -1,11 +1,10 @@
 set +x
 
-echo Instalando terraform e aws cli
-
+# Instalando terraform e aws cli
 while [ ! -f /tmp/setup-complete ]; do sleep 1; done
 
-echo "Iniciando o localstack"
-
+# Iniciando o localstack
+date
 while [ ! -f /tmp/localstack-up ]; do sleep 1; done
-
-echo Preparação concluída
+date
+# Preparação concluída
