@@ -9,8 +9,8 @@
     },
     "assets": {
         "host01": [
-            { "file": "localstack_credentials", "target": "./aws/credentials"},
-            { "file": "localstack_config", "target": "./aws/config"}
+            { "file": "localstack/credentials", "target": "./.aws"},
+            { "file": "localstack/config", "target": "./.aws"}
         ]
     },    
     "steps": [
