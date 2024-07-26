@@ -1,10 +1,16 @@
-set +x
+#!/usr/bin/env bash
 
-# Instalando terraform e aws cli
-while [ ! -f /tmp/setup-complete ]; do sleep 1; done
+set -euo pipefail
 
-# Iniciando o localstack
-date
-while [ ! -f /tmp/localstack-up ]; do sleep 1; done
-date
-# Preparação concluída
+echo "Setup running! Please wait up to 120 seconds."
+
+waitTries=0
+until [ -f /tmp/setup-complete ]; do
+  sleep 1
+  waitTries=$(( waitTries+1 ))
+  if [ "$waitTries" -gt 120 ]; then
+    echo "Failed to detect setup complete!" >&2
+  fi
+done
+
+echo "Setup complete successfully!"
