@@ -1,30 +1,17 @@
 {
-  "title": "Terraform playground",
-  "description": "Playground terraform",
+  "title": "Terraform Localstack Playground",
+  "description": "A simple AWS environment with Localstack and Terraform",
   "details": {
     "intro": {
       "text": "intro.md",
       "background": "setup.sh",
       "foreground": "wait.sh"
-    },
-    "assets": {
-        "host01": [
-            { "file": "localstack/credentials", "target": "./.aws"},
-            { "file": "localstack/config", "target": "./.aws"}
-        ]
-    },    
-    "steps": [
-      {
-        "title": "Usando terraform",
-        "text": "step1/text.md",
-        "verify": "step1/verify.sh"
-      }
-    ],
-    "finish": {
-      "text": "finish.md"
     }
   },
   "backend": {
     "imageid": "ubuntu"
+  },
+  "interface": {
+    "layout": "ide"
   }
 }
