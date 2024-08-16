@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
 echo "Setup running! Please wait up to 120 seconds."
 
 waitTries=0
