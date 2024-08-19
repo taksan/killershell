@@ -1,0 +1,22 @@
+{
+    "title": "Ambiente python",
+    "description": "Um ambiente mínimo para desenvolver em python",
+    "details": {
+        "intro": {
+            "text": "intro.md",
+            "foreground": "prepare.sh"
+        },
+        "assets": {
+            "host01": [
+                { "file": "logs.json", "target": "~/"}
+            ]
+        }
+
+    },
+    "backend": {
+        "imageid": "ubuntu"
+    },
+    "interface": {
+        "layout": "ide"
+    }
+}
