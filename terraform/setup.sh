@@ -30,6 +30,13 @@ aws_secret_access_key = test
 EOF
 chmod 600 "$HOME/.aws/credentials"
 
+cat > "$HOME/provider.tf" <<EOF
+provider "aws" {
+  s3_use_path_style           = true
+}
+EOF
+
+
 docker run -d \
   -p "4566:4566" -p "4510-4559:4510-4559" \
   -v "./localstack-volume:/var/lib/localstack" \
