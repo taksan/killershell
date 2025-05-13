@@ -6,6 +6,14 @@
       "text": "intro.md",
       "background": "setup.sh",
       "foreground": "wait.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "index.py",
+          "target": "~/"
+        }
+      ]
     }
   },
   "backend": {
