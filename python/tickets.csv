@@ -1,0 +1,10 @@
+id,created_at,resolved_at,severity,source,system,assignee
+1,2024-06-01T10:00:00,2024-06-01T12:30:00,High,datadog,Auth-Service,Ana
+2,2024-06-02T09:15:00,2024-06-02T11:45:00,alta,ServiceNow,auth service,Bruno
+3,2024-06-02T10:00:00,2024-06-02T14:00:00,ALTA,manual,AUTH_SERVICE,ana
+4,2024-06-03T08:00:00,,medium,datadog,PaymentService,Camila
+5,2024-06-03T08:30:00,2024-06-03T09:00:00,média,manual,payment-service,camila
+6,2024-06-04T07:50:00,2024-06-04T10:10:00,baixa,ServiceNow,Payment Service,Bruno
+7,2024-06-04T08:00:00,2024-06-04T09:10:00,low,manual,Payment_Service,bruno
+8,2024-06-04T10:00:00,,HIGH,datadog,Auth-Service,Ana
+
