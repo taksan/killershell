@@ -2,6 +2,6 @@
 
 set -euo pipefail
 
-apt install -y python3.8-venv
+apt install -y python3-venv
 
 touch /tmp/setup-complete
