@@ -1,0 +1,12 @@
+{
+  "title": "Zabbix agent",
+  "description": "A environment with zabbix agent installed",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    }  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
