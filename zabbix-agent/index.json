@@ -5,7 +5,13 @@
     "intro": {
       "text": "intro.md",
       "background": "setup.sh"
-    }  },
+    },
+    "assets": {
+            "host01": [
+                { "file": "hungry.json", "target": "~/"}
+            ]
+    }
+  },
   "backend": {
     "imageid": "ubuntu"
   }
