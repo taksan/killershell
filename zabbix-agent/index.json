@@ -1,18 +1,22 @@
 {
-  "title": "Zabbix agent",
-  "description": "A environment with zabbix agent installed",
-  "details": {
-    "intro": {
-      "text": "intro.md",
-      "background": "setup.sh"
-    },
-    "assets": {
+    "title": "Ambiente zabbix agent",
+    "description": "Um ambiente mínimo com o agente do zabbix instalado",
+    "details": {
+        "intro": {
+            "text": "intro.md",
+            "background": "setup.sh"
+        },
+        "assets": {
             "host01": [
-                { "file": "hungry.json", "target": "~/"}
+                { "file": "hungry.sh", "target": "~/"}
             ]
+        }
+
+    },
+    "backend": {
+        "imageid": "ubuntu"
+    },
+    "interface": {
+        "layout": "ide"
     }
-  },
-  "backend": {
-    "imageid": "ubuntu"
-  }
 }
